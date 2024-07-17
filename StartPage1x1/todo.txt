@@ -1,5 +1,0 @@
-get better weather icons from the font
-remove api key from being hardcoded and do the .env stuff
-get the page to resize correctly at lower resolution
-change font
-make sure font has large icons for the titles and stuff
