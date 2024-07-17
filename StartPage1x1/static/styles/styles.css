@@ -1,0 +1,169 @@
+:root {
+    --primary-background-color: #282A36;
+    --secondary-background-color: #44475A;
+    --tertiary-background-color: #1e1f29;
+    --primary-foreground-color: #F8F8F2;
+    --secondary-foreground-color: #BD93F9;
+    --tertiary-foreground-color: #44475A;
+    --normal-shadow: #01010170;
+    --selected-shadow: #585B6E;
+
+    --border-size: 10px;
+}
+
+@font-face {
+    font-family: "default-font";
+    src: url("../fonts/hack.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+	font-family: 'default-font', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	height: 100vh;
+	background: var(--tertiary-background-color);
+}
+
+.image{
+	grid-column: 2;
+	grid-row: 2;	
+	width: 60vh;
+    height: 60vh;
+	margin-right: 10vw;
+}
+
+
+.image img {
+	border-radius: 0.35vw;
+	justify-self: end;
+	max-width: 1000px;
+    max-height: 1000px;
+	transition: transform 0.3s ease-in-out;
+	
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+.nav-container {
+	background: var(--tertiary-background-color);
+	grid-column: 3;
+	grid-row: 2;
+	width: 60vh;
+    height: 60vh;
+}
+
+.headercontent{
+	text-align: center;
+	margin-bottom: 3vh;
+}
+
+.headercontent h1{
+	font-size: 5rem;
+	margin-top: 1.5vh;
+	color: var(--secondary-foreground-color);
+}
+
+.status-bar{
+	margin-bottom: 3vh;
+}
+
+.status-bar h2{
+	height: 3vh;
+	width: auto;
+	font-size: 1.7em;
+	color: var(--primary-foreground-color);
+	white-space: pre;
+}
+
+input {
+    background: var(--primary-background-color);
+    color: var(--primary-foreground-color);
+    font-size: 1.5em;
+	padding: 0.25em;
+    justify-content: start;
+    margin-top: 1em;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-color: transparent;
+    border-radius: var(--border-size);
+    border-width: 0.2em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-style: solid;
+}
+
+input:hover {
+    background: var(--primary-background-color);
+    border-color: var(--tertiary-foreground-color);
+    border-width: 0.2em;
+    border-radius: var(--border-size);
+    border-style: solid;
+}
+
+input::placeholder {
+    color: var(--tertiary-foreground-color);
+    font-size: 1em;
+    border-width: 0.2em;
+    border-color: transparent;
+}
+
+input:focus {
+    background-color: var(--tertiary-background-color);
+    border-color: var(--secondary-foreground-color);
+    border-width: 0.22em;
+    border-radius: var(--border-size);
+    border-style: solid;
+    outline: none;
+}
+
+
+.qickacesscontent{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+  line-height: 3rem;
+  font-size: auto;
+}
+
+.title {
+    margin-top: 2vh;
+    color: var(--secondary-foreground-color);
+    font-size: 1.3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    width: 15vh;
+    height: 30vh;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--primary-foreground-color);
+    margin-top: 2vh;
+}
+
+a:hover {   
+    color: var(--secondary-foreground-color);
+}
